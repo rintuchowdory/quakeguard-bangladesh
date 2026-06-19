@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy-900: #0A0E1A;
+  --navy-800: #0F1625;
+  --navy-700: #141C2E;
+  --navy-600: #1E2D4A;
+  --amber: #F59E0B;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--navy-900);
+}
+
+/* Custom scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #253558;
+  border-radius: 2px;
+}
+
+/* Seismic wave animation for logo */
+@keyframes seismicWave {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-3px); }
+  50% { transform: translateY(2px); }
+  75% { transform: translateY(-1px); }
+  100% { transform: translateY(0); }
+}
+
+.seismic-logo {
+  animation: seismicWave 2s ease-in-out infinite;
+}
